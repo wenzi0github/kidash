@@ -24,3 +24,4 @@ const openUrl = (url: string, attrs?: any) => {
   //移除a标签
   a.parentNode?.removeChild(a);
 };
+export default openUrl
