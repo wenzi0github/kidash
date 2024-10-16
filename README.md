@@ -1,3 +1,3 @@
 # kidash
 
-a famirs and popular util tools.
+a famous and popular util tools.
