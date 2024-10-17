@@ -1,8 +1,7 @@
 function random(start: number, end: number): number;
 function random(end: number): number;
-function random(str: string, length: number): string;
 
-function random(arg1: number | string, arg2?: number): number | string {
+function random(arg1: number, arg2?: number): number | string {
   if (typeof arg1 === "string") {
     return 123;
   }
