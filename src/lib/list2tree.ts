@@ -3,7 +3,6 @@ const list2tree = (list: any[], cfg?: { key?: string; pid?: string; children?: s
     return [];
   }
   const arr: any[] = []; // 最外层数组
-  const map = new Map(); // 存储每个评论的回复，方便进行层级的组装
   const reply = new Map(); // 楼中楼中的数据
 
   const key = cfg?.key || "key"; // 当前数据的主key的字段名称
@@ -11,11 +10,9 @@ const list2tree = (list: any[], cfg?: { key?: string; pid?: string; children?: s
   const children = cfg?.children || "children"; // 子级元素的名称
 
   list.forEach(item => {
-    map.set(key, item);
-
     if (item[pid]) {
       // 有父级id，说明是回复
-      reply.set(pid, (reply.get(pid) || []).concat(item));
+      reply.set(item[pid], (reply.get(item[pid]) || []).concat(item));
     } else {
       // 没有父级id，说明是最外层的评论
       arr.push(item);
@@ -23,13 +20,13 @@ const list2tree = (list: any[], cfg?: { key?: string; pid?: string; children?: s
   });
 
   // 组装成楼中楼的结构
-  return arr.map((comment) => {
-    const childData = reply.get(comment.id);
+  return arr.map((item) => {
+    const childData = reply.get(item[key]);
 
     if (childData) {
-      comment[children] = childData;
+      item[children] = childData;
     }
-    return comment;
+    return item;
   });
 }
 export default list2tree;
