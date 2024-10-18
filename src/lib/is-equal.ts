@@ -1,17 +1,22 @@
+import getTag from "./get-tag";
+
 const isEqual = (value: any, other: any) => {
   if (value === other) {
     return true;
   }
 
-  const valueType: string = Object.prototype.toString.call(value);
-  const otherType: string = Object.prototype.toString.call(other);
+  const valueType = getTag(value);
+  const otherType = getTag(other);
+
   if (valueType !== otherType) {
+    // 两者的类型不同，直接返回false
     return false;
   }
 
   if (valueType === "[object Array]") {
     const { length } = value;
     if (length !== other.length) {
+      // 两者的长度不同，直接返回false
       return false;
     }
     for (let i = 0; i < length; i++) {
