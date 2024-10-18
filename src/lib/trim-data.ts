@@ -6,13 +6,13 @@ const trimData = (data: any): any => {
   }
   if (Array.isArray(data)) {
     // 仅针对数组
-    return data.map(item => trimData(item));
+    return data.map((item) => trimData(item));
   }
   if (isPlainObject(data)) {
     // 仅针对普通对象
     const result: any = {};
 
-    for(const key in data) {
+    for (const key in data) {
       result[key] = trimData(data[key]);
     }
     return result;
