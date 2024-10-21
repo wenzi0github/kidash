@@ -4,7 +4,7 @@ const deepClone = (source: any) => {
   }
 
   const find = (source: any, hash = new WeakMap()) => {
-    const target = Array.isArray(source) ? [] : {};
+    const target: any = Array.isArray(source) ? [] : {};
 
     if (hash.has(source)) {
       return hash.get(source);
@@ -20,3 +20,4 @@ const deepClone = (source: any) => {
 
   return find(source);
 };
+export default deepClone;

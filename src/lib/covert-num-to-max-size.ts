@@ -34,12 +34,12 @@ const covertNumToMaxSize = (
 
   // 判断数字处于哪个量级
   for (; i < sizes.length - 1; i++) {
-    if (num < sizes[i + 1][0]) {
+    if (num < (sizes as any)[i + 1][0]) {
       break;
     }
   }
-  if (sizes[i][0]) {
-    num /= sizes[i][0];
+  if ((sizes as any)[i][0]) {
+    num /= (sizes as any)[i][0];
   }
 
   let result: number | string = num.toFixed(decimal);
@@ -50,13 +50,13 @@ const covertNumToMaxSize = (
   if (thousandth) {
     const [first, last] = String(result).split(".");
 
-    if (first.length > 3 || (last?.length || 0) > 3) {
+    if ((first?.length || 0) > 3 || (last?.length || 0) > 3) {
       // 将字符串添加千分位
       result = String(result).replace(/(\d{1,3})(?=(\d{3})+(?:$|\.))/g, "$1,");
     }
   }
-  if (unit && sizes[i][1]) {
-    result += sizes[i][1];
+  if (unit && (sizes as any)[i][1]) {
+    result += (sizes as any)[i][1];
   }
   return result;
 };

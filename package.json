@@ -1,7 +1,7 @@
 {
   "name": "kidash",
-  "version": "0.0.1",
-  "description": "JavaScript util tool",
+  "version": "0.0.2",
+  "description": "JavaScript Util Tool",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
