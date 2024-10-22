@@ -2,6 +2,9 @@
   "name": "kidash",
   "version": "0.0.3",
   "description": "JavaScript Util Tool",
+  "keywords": [
+    "util"
+  ],
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {

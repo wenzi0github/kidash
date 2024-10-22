@@ -1,4 +1,4 @@
-import trimData from "../src/lib/trim-data";
+import trimData from "../src/trim-data";
 
 describe("trimData", () => {
   it("should return original data when data is falsly", () => {

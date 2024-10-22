@@ -1,4 +1,4 @@
-import tree2list from "../src/lib/tree2list";
+import tree2list from "../src/tree2list";
 
 describe("tree2list", () => {
   it("should return empty array when tree is not array", () => {

@@ -1,4 +1,4 @@
-import covertNumToMaxSize from "../src/lib/covert-num-to-max-size";
+import covertNumToMaxSize from "../src/covert-num-to-max-size";
 
 describe("test covertNumToMaxSize", () => {
   test("should get zero when param is not number", () => {

@@ -1,4 +1,4 @@
-import size from "../src/lib/size";
+import size from "../src/size";
 
 describe("size", () => {
   test("should return the length of an array or string", () => {
