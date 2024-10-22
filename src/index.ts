@@ -1,17 +1,17 @@
-import covertNumToMaxSize from "./lib/covert-num-to-max-size";
-import deepClone from "./lib/deep-clone";
-import getScript from "./lib/get-script";
-import getTag from "./lib/get-tag";
-import isEqual from "./lib/is-equal";
-import isNil from "./lib/is-nil";
-import isPlainObject from "./lib/is-plain-object";
-import list2tree from "./lib/list2tree";
-import openUrl from "./lib/open-url";
-import randomString from "./lib/random-string";
-import random from "./lib/random";
-import size from "./lib/size";
-import tree2list from "./lib/tree2list";
-import trimData from "./lib/trim-data";
+import covertNumToMaxSize from "./covert-num-to-max-size";
+import deepClone from "./deep-clone";
+import getScript from "./get-script";
+import getTag from "./get-tag";
+import isEqual from "./is-equal";
+import isNil from "./is-nil";
+import isPlainObject from "./is-plain-object";
+import list2tree from "./list2tree";
+import openUrl from "./open-url";
+import randomString from "./random-string";
+import random from "./random";
+import size from "./size";
+import tree2list from "./tree2list";
+import trimData from "./trim-data";
 
 export {
   covertNumToMaxSize,
