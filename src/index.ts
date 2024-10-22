@@ -5,6 +5,7 @@ import getTag from "./get-tag";
 import isEqual from "./is-equal";
 import isNil from "./is-nil";
 import isPlainObject from "./is-plain-object";
+import isParamEmpty from "./is-param-empty";
 import list2tree from "./list2tree";
 import openUrl from "./open-url";
 import randomString from "./random-string";
@@ -19,6 +20,7 @@ export {
   isEqual,
   isNil,
   isPlainObject,
+  isParamEmpty,
   list2tree,
   openUrl,
   size,
