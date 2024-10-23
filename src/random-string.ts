@@ -11,13 +11,13 @@ const randomString = (len = 32, base?: string) => {
   let count = typeof len !== "number" || len <= 0 ? BASE_LEN : len;
   let result = "";
 
-  if (count <= BASE_LEN && !base && typeof crypto.randomUUID === "function") {
+  if (count <= BASE_LEN && !base && typeof crypto?.randomUUID === "function") {
     return crypto.randomUUID().replace(/-/g, "").substring(0, count);
   }
-  if (typeof Uint32Array === "function" && typeof crypto.getRandomValues === "function") {
+  if (typeof Uint32Array === "function" && typeof crypto?.getRandomValues === "function") {
     const randomValues = new Uint32Array(count);
 
-    window.crypto.getRandomValues(randomValues);
+    crypto.getRandomValues(randomValues);
     randomValues.forEach((value) => {
       result += characters.charAt(value % charactersLength);
     });
