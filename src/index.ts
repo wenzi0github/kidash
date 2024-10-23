@@ -11,23 +11,25 @@ import openUrl from "./open-url";
 import randomString from "./random-string";
 import random from "./random";
 import size from "./size";
+import sleep from "./sleep";
 import tree2list from "./tree2list";
 import trimData from "./trim-data";
 
 export {
   covertNumToMaxSize,
   deepClone,
+  getScript,
+  getTag,
   isEqual,
   isNil,
   isPlainObject,
   isParamEmpty,
   list2tree,
   openUrl,
-  size,
-  random,
   randomString,
-  trimData,
-  getScript,
+  random,
+  size,
+  sleep,
   tree2list,
-  getTag,
+  trimData,
 };
