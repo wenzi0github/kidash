@@ -7,7 +7,7 @@ function random(end: number): number;
  * @param arg2 max number
  * @returns
  */
-function random(arg1: number, arg2?: number): number | string {
+function random(arg1: number, arg2?: number): number {
   const start = typeof arg2 === "undefined" ? 0 : arg1;
   const end = typeof arg2 === "undefined" ? arg1 : arg2;
 
