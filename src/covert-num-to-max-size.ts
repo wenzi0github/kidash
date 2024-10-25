@@ -3,6 +3,7 @@
  * @param num 要转换的数字
  * @param config 配置
  * @returns 返回转换后的数字
+ * @see https://www.xiabingbao.com/post/fe/covert-num-sel4mj.html
  */
 const covertNumToMaxSize = (
   num: number,

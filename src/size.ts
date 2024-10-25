@@ -1,4 +1,6 @@
+import getTag from "./get-tag";
 import isNil from "./is-nil";
+import isPlainObject from "./is-plain-object";
 
 /**
  * get value children length, if value is null or undefined return 0
@@ -10,13 +12,12 @@ const size = (value: any) => {
   if (typeof value === "string" || Array.isArray(value)) {
     return value.length;
   }
-  if (typeof value === "number") {
-    return 0;
+  const tag = getTag(value);
+  if (tag == "[object Map]" || tag == "[object Set]") {
+    return value.size;
   }
-  try {
-    return Object.keys(value as any).length;
-  } catch (err) {
-    console.error("size value is only `string | object | null | undefined`");
+  if (isPlainObject(value)) {
+    return Object.keys(value).length;
   }
   return 0;
 };
