@@ -1,5 +1,10 @@
+/**
+ * 深度拷贝
+ * @param source
+ */
 const deepClone = (source: any) => {
   if (typeof source !== "object" || source == null) {
+    // 普通类型的数据，直接返回即可
     return source;
   }
 

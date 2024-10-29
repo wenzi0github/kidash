@@ -1,3 +1,5 @@
+import buildFullPath from "./build-full-path";
+import combineURL from "./combine-url";
 import covertNumToMaxSize from "./covert-num-to-max-size";
 import deepClone from "./deep-clone";
 import getScript from "./get-script";
@@ -16,6 +18,8 @@ import tree2list from "./tree2list";
 import trimData from "./trim-data";
 
 export {
+  buildFullPath,
+  combineURL,
   covertNumToMaxSize,
   deepClone,
   getScript,

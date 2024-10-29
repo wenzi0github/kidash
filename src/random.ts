@@ -5,7 +5,7 @@ function random(end: number): number;
  * create random number between min and max
  * @param arg1 min number
  * @param arg2 max number
- * @returns
+ * @returns {number}
  */
 function random(arg1: number, arg2?: number): number {
   const start = typeof arg2 === "undefined" ? 0 : arg1;
