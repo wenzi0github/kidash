@@ -26,11 +26,18 @@ const isEqual = (value: any, other: any) => {
     }
     return true;
   }
-  for (const key in value) {
-    if (!isEqual(value[key], other[key])) {
+  if (valueType === "[object Object]") {
+    if (Object.keys(value).length !== Object.keys(other).length) {
       return false;
     }
+
+    for (const key in value) {
+      if (!isEqual(value[key], other[key])) {
+        return false;
+      }
+    }
+    return true;
   }
-  return true;
+  return value === other;
 };
 export default isEqual;
