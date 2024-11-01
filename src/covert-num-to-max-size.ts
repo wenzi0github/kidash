@@ -16,7 +16,7 @@ const covertNumToMaxSize = (
   }
 ) => {
   if (typeof num !== "number") {
-    // 万一接口在数据为0时返回null或undefined等类型
+    // 万一接口在数据为 0 时返回 null 或 undefined 等类型
     return 0;
   }
 

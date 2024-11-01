@@ -1,7 +1,12 @@
 {
   "name": "kidash",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "JavaScript Util Tool",
+  "homepage": "https://www.xiabingbao.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wenzi0github/kidash"
+  },
   "keywords": [
     "util"
   ],
